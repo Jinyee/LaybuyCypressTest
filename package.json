@@ -1,0 +1,24 @@
+{
+  "name": "Jinyee",
+  "version": "1.0.0",
+  "description": "Jinyi Cypress Test",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^7.0.1"
+  },
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jinyee/Jinyee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jinyee/Jinyee/issues"
+  },
+  "homepage": "https://github.com/Jinyee/Jinyee#readme"
+}
