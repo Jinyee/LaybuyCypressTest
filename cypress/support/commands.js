@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('EnterKeywordAndSearch',(keyword)=>{
+    cy.get('input').scrollIntoView().should('be.visible')
+    cy.get('input').focus().type(keyword)
+})
+
+Cypress.Commands.add('AssertUrlContains',(keyword)=>{
+    cy.url().should('include', keyword)
+})
+
+Cypress.Commands.add('AssertDirectoryTiles', (elements, count) =>{
+    cy.get(elements).should('have.length', count).and('have.attr','href') 
+    cy.get(elements).each(($element) =>{
+       expect($element).to.have.attr('target', '_blank')
+       cy.get($element).then(Link =>{cy.request(Link.prop('href')).its('status').should('eq',200)})
+    })
+})

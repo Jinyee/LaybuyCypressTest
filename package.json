@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Jinyi Cypress Test",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^7.1.0",
+    "sinon-chai": "^3.6.0"
+  },
   "devDependencies": {
-    "cypress": "^7.0.1"
+    "cypress": "^7.1.0"
   },
   "scripts": {
     "test": "cypress open"
